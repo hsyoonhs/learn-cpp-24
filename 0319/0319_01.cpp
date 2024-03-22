@@ -4,9 +4,19 @@ using namespace std;
 
 class Fortune
 {
-public:
-	string prob = "answer"; // 정답 기본값
+	string prob = "space"; // 정답 기본값
 	int triesLimit = 6; // 시도 수 기본값
+
+public:
+	void setProb(string input)
+	{
+		prob = input;
+	}
+
+	void setTriesLimit(int input)
+	{
+		triesLimit = input;
+	}
 
 	void play()
 	{
@@ -60,8 +70,8 @@ public:
 int main()
 {
 	Fortune game;
-	// game.prob = "coffee"; // 정답 임의 지정 가능
-	// game.triesLimit = 3; // 시도 수 임의 지정 가능
+	// game.setProb("kumoh"); // 정답 임의 지정 가능
+	// game.setTriesLimit(3); // 시도 수 임의 지정 가능
 	game.play();
 
 	return 0;
